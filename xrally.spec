@@ -13,6 +13,7 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxgames.com/xrally/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,21 +48,21 @@ np. stworzyæ styl z wod± i u¿yæ ³odzi zamiast samochodów.)
 rm -f maps/"Test Level"
 
 %build
+rm -f missing
 aclocal
 autoconf
-rm -f missing
 automake -a -c
 %configure
 %{__make} CFLAGS="%{optflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_datadir}/pixmaps}
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
-install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf AUTHORS COPYING NEWS README TODO %{name}.lsm
 
@@ -73,3 +74,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/xrally
+%{_applnkdir}/Games/Arcade/*
+%{_pixmapsdir}/*
