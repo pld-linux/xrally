@@ -1,10 +1,10 @@
 Summary:	Clone of the Rally X arcade game
-Summary(es): Clon del juego Rally X
+Summary(es):	Clon del juego Rally X
 Summary(pl):	Klon gry Rally X
-Summary(pt_BR): Clone do jogo de fliperama Rally X
+Summary(pt_BR):	Clone do jogo de fliperama Rally X
 Name:		xrally
 Version:	1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 # Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
@@ -45,14 +45,15 @@ wczytywaæ je w czasie gry, zmieniaj±c ca³kowicie jej wygl±d. (Mo¿esz
 np. stworzyæ styl z wod± i u¿yæ ³odzi zamiast samochodów.)
 
 %description -l pt_BR
-O XRally é um clone do jogo de fliperama Rally X. No Rally X, você controla um
-carro azul, que corre num labirinto e deve coletar bandeiras, evitando colidir
-com os carros (vermelhos) inimigos. Para se proteger, o carro azul pode
-disparar nuvens de fumaça que desnorteiam os carros inimigos por algum tempo.
-Uma das principais características do XRally é que ele é completamente
-configurável. Você pode criar seus próprios cenários e carregá-los na hora do
-jogo, mudando todo seu aspecto gráfico. Você pode por exemplo, criar um cenário
-marítimo, usando barcos ao invés de carros.
+O XRally é um clone do jogo de fliperama Rally X. No Rally X, você
+controla um carro azul, que corre num labirinto e deve coletar
+bandeiras, evitando colidir com os carros (vermelhos) inimigos. Para
+se proteger, o carro azul pode disparar nuvens de fumaça que
+desnorteiam os carros inimigos por algum tempo. Uma das principais
+características do XRally é que ele é completamente configurável. Você
+pode criar seus próprios cenários e carregá-los na hora do jogo,
+mudando todo seu aspecto gráfico. Você pode por exemplo, criar um
+cenário marítimo, usando barcos ao invés de carros.
 
 %prep
 %setup -q -n %{name}
