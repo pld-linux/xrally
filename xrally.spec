@@ -67,7 +67,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure
-%{__make} CFLAGS="%{optflags}"
+%{__make} CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
