@@ -30,13 +30,13 @@ rm maps/"Test Level"
 
 %build
 automake
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make} CFLAGS="%{optflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS BUGS NEWS README TODO %{name}.lsm
 
