@@ -8,7 +8,7 @@ Group(pl):	X11/Gry
 Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
 Patch0:		xrally-DESTDIR.patch
 URL:		http://www.linuxgames.com/xrally/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
