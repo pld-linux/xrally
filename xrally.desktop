@@ -6,6 +6,6 @@ Comment[pl]=Klon gry Rally X
 Comment[pt_BR]=Clone do jogo de fliperama Rally X
 Icon=xrally.png
 Exec=xrally
-Terminal=0
+Terminal=false
 Type=Application
 # vi: encoding=utf-8
