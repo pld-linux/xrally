@@ -5,8 +5,6 @@ Version:	1.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 # Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/xrally/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
