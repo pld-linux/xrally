@@ -1,0 +1,21 @@
+--- xrally/configure.in~	Sat Aug 10 12:54:50 2002
++++ xrally/configure.in	Sat Aug 10 12:54:50 2002
+@@ -7,7 +7,6 @@
+ 
+ dnl Variables
+ INCLUDES=-I.
+-CFLAGS="-O3 -g3 -Wall"
+ 
+ 
+ dnl Checks for programs.
+@@ -68,10 +67,6 @@
+ AC_CHECK_LIB([Xpm], [XpmReadFileToPixmap], [LIBS="$LIBS -lXpm"], AC_MSG_ERROR([You don't have the Xpm libraries/includes. Please get the package xpm-devel from your linux distribution. (Or try to download it at http://linux.tucows.com)]))
+ 
+ 
+-dnl Final substitutions
+-AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE")
+-AC_DEFINE_UNQUOTED(VERSION, "$VERSION")
+-
+ if test $prefix = "NONE" ; then
+ 	AC_DEFINE_UNQUOTED(DATADIR, "/usr/local")
+ else
