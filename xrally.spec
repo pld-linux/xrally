@@ -35,7 +35,7 @@ instead of cars.)
 
 %description -l pl
 XRally jest klonem gry Rally X. W Rally X mo¿esz kierowaæ niebieskim
-samochodem który ma przejechaæ przez labirynty zbiraj±c flagi i
+samochodem który ma przejechaæ przez labirynty zbieraj±c flagi i
 unikaj±c kolizji z wrogimi (czerwonymi) samochodami. Aby siê
 zabezpieczyæ, niebieski samochód mo¿e usuwaæ na chwilê k³êby dymu
 pozostawiane przez wrogie samochody. Wrogie samochody mog± rozbijaæ
