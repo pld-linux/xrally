@@ -34,14 +34,14 @@ game. (You could, for instance, create a water tileset, using boats
 instead of cars.)
 
 %description -l pl
-XRally jest klonem gry Rally X. W Rally X mo¿esz kierowaæ niebieskim
-samochodem który ma przejechaæ przez labirynty zbieraj±c flagi i
+XRally jest klonem gry Rally X. W Rally X gracz kieruje niebieskim
+samochodem, który ma przejechaæ przez labirynty zbieraj±c flagi i
 unikaj±c kolizji z wrogimi (czerwonymi) samochodami. Aby siê
 zabezpieczyæ, niebieski samochód mo¿e usuwaæ na chwilê k³êby dymu
 pozostawiane przez wrogie samochody. Wrogie samochody mog± rozbijaæ
-siê wzajemnie, co daje Ci trochê czasu. Jedn± z g³ównych zalet XRally
-jest du¿a konfigurowalno¶æ. Mo¿esz tworzyæ w³asne style i poziomy oraz
-wczytywaæ je w czasie gry, zmieniaj±c ca³kowicie jej wygl±d. (Mo¿esz
+siê wzajemnie, co daje trochê czasu. Jedn± z g³ównych zalet XRally
+jest du¿a konfigurowalno¶æ. Mo¿na tworzyæ w³asne style i poziomy oraz
+wczytywaæ je w czasie gry, zmieniaj±c ca³kowicie jej wygl±d. (Mo¿na
 np. stworzyæ styl z wod± i u¿yæ ³odzi zamiast samochodów.)
 
 %description -l pt_BR
