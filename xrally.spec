@@ -1,13 +1,16 @@
 Summary:	Clone of the Rally X arcade game
 Summary(pl):	Klon gry Rally X
 Name:		xrally
-Version:	0.9
+Version:	1.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Group(de):	X11/Applikationen/Spiele
 Group(pl):	X11/Aplikacje/Gry
-Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
+# Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/xrally/%{name}-%{version}.tar.bz2
+Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxgames.com/xrally/
 BuildRequires:	automake
@@ -44,16 +47,23 @@ np. stworzyæ styl z wod± i u¿yæ ³odzi zamiast samochodów.)
 rm -f maps/"Test Level"
 
 %build
+aclocal
+autoconf
+rm -f missing
 automake -a -c
 %configure
 %{__make} CFLAGS="%{optflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_datadir}/pixmaps}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf AUTHORS BUGS NEWS README TODO %{name}.lsm
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
+
+gzip -9nf AUTHORS COPYING NEWS README TODO %{name}.lsm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
