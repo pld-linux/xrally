@@ -9,6 +9,7 @@ License:	GPL
 Group:		X11/Applications/Games
 # Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
 Source0:	http://dl.sourceforge.net/xrally/%{name}-%{version}.tar.bz2
+# Source0-md5:	ecb8027508a65a960c0b804ba1f8363c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-DESTDIR.patch
