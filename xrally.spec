@@ -1,35 +1,50 @@
-Summary:	clone of the Rally X arcade game
+Summary:	Clone of the Rally X arcade game
+Summary(pl):	Klon gry Rally X
 Name:		xrally
 Version:	0.9
 Release:	1
 License:	GPL
-Group:		X11/Games
-Group(pl):	X11/Gry
+Group:		X11/Applications/Games
+Group(de):	X11/Applikationen/Spiele
+Group(pl):	X11/Aplikacje/Gry
 Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
-Patch0:		xrally-DESTDIR.patch
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.linuxgames.com/xrally/
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
 %description
-XRally is a clone of the Rally X arcade game. In Rally X, you control a
-blue car which has to run through a maze-like level collecting flags and
-avoiding colliding with enemy (red) cars. In order to protect itself, the
-blue car can discharge clouds of smoke which stun the enemy cars for a
-while. The enemy cars can also crash into each other, what gives you some
-extra time. One of the main features of XRally is that it is fully
-customizable. You can create custom tilesets and levels and load them at
-run time, changing the entire look of the game. (You could, for instance,
-create a water tileset, using boats instead of cars.)
+XRally is a clone of the Rally X arcade game. In Rally X, you control
+a blue car which has to run through a maze-like level collecting flags
+and avoiding colliding with enemy (red) cars. In order to protect
+itself, the blue car can discharge clouds of smoke which stun the
+enemy cars for a while. The enemy cars can also crash into each other,
+what gives you some extra time. One of the main features of XRally is
+that it is fully customizable. You can create custom tilesets and
+levels and load them at run time, changing the entire look of the
+game. (You could, for instance, create a water tileset, using boats
+instead of cars.)
+
+%description -l pl
+XRally jest klonem gry Rally X. W Rally X mo¿esz kierowaæ niebieskim
+samochodem który ma przejechaæ przez labirynty zbiraj±c flagi i
+unikaj±c kolizji z wrogimi (czerwonymi) samochodami. Aby siê
+zabezpieczyæ, niebieski samochód mo¿e usuwaæ na chwilê k³êby dymu
+pozostawiane przez wrogie samochody. Wrogie samochody mog± rozbijaæ
+siê wzajemnie, co daje Ci trochê czasu. Jedn± z g³ównych zalet XRally
+jest du¿a konfigurowalno¶æ. Mo¿esz tworzyæ w³asne style i poziomy oraz
+wczytywaæ je w czasie gry, zmieniaj±c ca³kowicie jej wygl±d. (Mo¿esz
+np. stworzyæ styl z wod± i u¿yæ ³odzi zamiast samochodów.)
 
 %prep
 %setup -q -n %{name}
 %patch -p1
-rm maps/"Test Level"
+rm -f maps/"Test Level"
 
 %build
-automake
+automake -a -c
 %configure
 %{__make} CFLAGS="%{optflags}"
 
