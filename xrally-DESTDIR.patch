@@ -1,0 +1,32 @@
+diff -Nru xrally/Makefile.am xrally.new/Makefile.am
+--- xrally/Makefile.am	Sun Mar 12 03:45:32 2000
++++ xrally.new/Makefile.am	Sun Mar 12 03:46:06 2000
+@@ -1,7 +1,7 @@
+ ####### kdevelop will overwrite this part!!! (begin)##########
+ bin_PROGRAMS = xrally
+ xrally_SOURCES = main.c graphics.c map.c car.c ai.c menu.c
+-xrally_LDADD = -lXpm -lX11
++xrally_LDADD = -L$(x_libraries) -lXpm -lX11
+ 
+ 
+ EXTRA_DIST = $xrally_SOURCES
+@@ -10,16 +10,14 @@
+ bin_PROGRAMS = xrally
+ 
+ INCLUDES=-I$(x_includes)
+-LDFLAGS=-L$(x_libraries)
+ # PACKAGE="XRally "
+ # VERSION="0.7.2"
+-CFLAGS= -O3 -g3 -Wall
+ DEFS= -I. # -DPACKAGE=$(PACKAGE) -DVERSION=$(VERSION) -I.
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(prefix)/share/$(bin_PROGRAMS)/maps
+-	$(INSTALL_DATA) maps/* $(prefix)/share/$(bin_PROGRAMS)/maps
+-	cp -r images $(prefix)/share/$(bin_PROGRAMS)
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/xrally/maps
++	$(INSTALL_DATA) maps/* $(DESTDIR)$(datadir)/xrally/maps
++	cp -r images $(DESTDIR)$(datadir)/xrally
+ 	@echo '--------------------------------------------------------------------- \nThe levels files were installed to $(prefix)/share/$(bin_PROGRAMS)/maps \n and the tilesets were installed to $(prefix)/share/$(bin_PROGRAMS)/images \n----------------------------------------------------------------------'
+ 
+ uninstall-local:
