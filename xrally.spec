@@ -4,7 +4,7 @@ Summary(pl):	Klon gry Rally X
 Summary(pt_BR):	Clone do jogo de fliperama Rally X
 Name:		xrally
 Version:	1.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Games
 # Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
