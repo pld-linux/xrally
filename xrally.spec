@@ -75,7 +75,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}} \
 	$RPM_BUILD_ROOT%{_localstatedir}/games
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
@@ -92,4 +93,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/xrally
 %{_applnkdir}/Games/Arcade/*
 %{_pixmapsdir}/*
-%attr(664,root,games) %config %verify(not md5 size mtime) %{_localstatedir}/games/%{name}.scores
+%attr(664,root,games) %config %verify(not md5 mtime size) %{_localstatedir}/games/%{name}.scores
