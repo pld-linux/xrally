@@ -1,7 +1,7 @@
 Summary:	Clone of the Rally X arcade game
-Summary(es.UTF-8):   Clon del juego Rally X
-Summary(pl.UTF-8):   Klon gry Rally X
-Summary(pt_BR.UTF-8):   Clone do jogo de fliperama Rally X
+Summary(es.UTF-8):	Clon del juego Rally X
+Summary(pl.UTF-8):	Klon gry Rally X
+Summary(pt_BR.UTF-8):	Clone do jogo de fliperama Rally X
 Name:		xrally
 Version:	1.1
 Release:	4
