@@ -1,7 +1,7 @@
 Summary:	Clone of the Rally X arcade game
-Summary(es):	Clon del juego Rally X
-Summary(pl):	Klon gry Rally X
-Summary(pt_BR):	Clone do jogo de fliperama Rally X
+Summary(es.UTF-8):   Clon del juego Rally X
+Summary(pl.UTF-8):   Klon gry Rally X
+Summary(pt_BR.UTF-8):   Clone do jogo de fliperama Rally X
 Name:		xrally
 Version:	1.1
 Release:	4
@@ -33,27 +33,27 @@ levels and load them at run time, changing the entire look of the
 game. (You could, for instance, create a water tileset, using boats
 instead of cars.)
 
-%description -l pl
+%description -l pl.UTF-8
 XRally jest klonem gry Rally X. W Rally X gracz kieruje niebieskim
-samochodem, który ma przejechaæ przez labirynty zbieraj±c flagi i
-unikaj±c kolizji z wrogimi (czerwonymi) samochodami. Aby siê
-zabezpieczyæ, niebieski samochód mo¿e usuwaæ na chwilê k³êby dymu
-pozostawiane przez wrogie samochody. Wrogie samochody mog± rozbijaæ
-siê wzajemnie, co daje trochê czasu. Jedn± z g³ównych zalet XRally
-jest du¿a konfigurowalno¶æ. Mo¿na tworzyæ w³asne style i poziomy oraz
-wczytywaæ je w czasie gry, zmieniaj±c ca³kowicie jej wygl±d. (Mo¿na
-np. stworzyæ styl z wod± i u¿yæ ³odzi zamiast samochodów.)
+samochodem, ktÃ³ry ma przejechaÄ‡ przez labirynty zbierajÄ…c flagi i
+unikajÄ…c kolizji z wrogimi (czerwonymi) samochodami. Aby siÄ™
+zabezpieczyÄ‡, niebieski samochÃ³d moÅ¼e usuwaÄ‡ na chwilÄ™ kÅ‚Ä™by dymu
+pozostawiane przez wrogie samochody. Wrogie samochody mogÄ… rozbijaÄ‡
+siÄ™ wzajemnie, co daje trochÄ™ czasu. JednÄ… z gÅ‚Ã³wnych zalet XRally
+jest duÅ¼a konfigurowalnoÅ›Ä‡. MoÅ¼na tworzyÄ‡ wÅ‚asne style i poziomy oraz
+wczytywaÄ‡ je w czasie gry, zmieniajÄ…c caÅ‚kowicie jej wyglÄ…d. (MoÅ¼na
+np. stworzyÄ‡ styl z wodÄ… i uÅ¼yÄ‡ Å‚odzi zamiast samochodÃ³w.)
 
-%description -l pt_BR
-O XRally é um clone do jogo de fliperama Rally X. No Rally X, você
+%description -l pt_BR.UTF-8
+O XRally Ã© um clone do jogo de fliperama Rally X. No Rally X, vocÃª
 controla um carro azul, que corre num labirinto e deve coletar
 bandeiras, evitando colidir com os carros (vermelhos) inimigos. Para
-se proteger, o carro azul pode disparar nuvens de fumaça que
+se proteger, o carro azul pode disparar nuvens de fumaÃ§a que
 desnorteiam os carros inimigos por algum tempo. Uma das principais
-características do XRally é que ele é completamente configurável. Você
-pode criar seus próprios cenários e carregá-los na hora do jogo,
-mudando todo seu aspecto gráfico. Você pode por exemplo, criar um
-cenário marítimo, usando barcos ao invés de carros.
+caracterÃ­sticas do XRally Ã© que ele Ã© completamente configurÃ¡vel. VocÃª
+pode criar seus prÃ³prios cenÃ¡rios e carregÃ¡-los na hora do jogo,
+mudando todo seu aspecto grÃ¡fico. VocÃª pode por exemplo, criar um
+cenÃ¡rio marÃ­timo, usando barcos ao invÃ©s de carros.
 
 %prep
 %setup -q -n %{name}
