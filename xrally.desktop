@@ -1,11 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=XRally
 Comment=A clone of the Rally X arcade game
 Comment[es]=Clon del juego Rally X
 Comment[pl]=Klon gry Rally X
 Comment[pt_BR]=Clone do jogo de fliperama Rally X
-Icon=xrally.png
+Icon=xrally
 Exec=xrally
 Terminal=false
 Type=Application
