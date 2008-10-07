@@ -1,0 +1,49 @@
+--- xrally/global.h.orig	2008-10-06 18:57:21.452576680 +0200
++++ xrally/global.h	2008-10-06 19:03:59.425224926 +0200
+@@ -182,8 +182,8 @@
+ #define _D_CRIT "\x1b[31m"
+ #define _D_WARN "\x1b[36m"
+ #define _D(args...) do { \
+-        printf("\x1b[33m" __PRETTY_FUNCTION__ " \x1b[37m[" __FILE__ \
+-        ":%d] " _D_INFO, __LINE__); printf (args); printf ("\x1b[0m\n"); \
++        printf("\x1b[33m%s \x1b[37m[" __FILE__ \
++        ":%d] " _D_INFO, __PRETTY_FUNCTION__, __LINE__); printf (args); printf ("\x1b[0m\n"); \
+         } while (0)
+ 
+ #define ldbg(STR...) { if (DEBUG&4) _D(_D_INFO STR); }
+--- xrally/sound.c.orig	2008-10-06 19:09:37.901962190 +0200
++++ xrally/sound.c	2008-10-06 19:14:31.381791990 +0200
+@@ -17,7 +17,7 @@
+  *                                                                         *
+  ***************************************************************************/
+ #include <stdio.h>
+-#include <stdio.h>
++#include <string.h>
+ #include <stdlib.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -561,8 +561,8 @@
+ 				ck->volume = ck->fx[retrig].data[0] *
+ 					ck->fx[retrig].data[2];
+ 			}
+-
+ skip_extended:
++			;
+ 		} else {
+ 			/*
+ 			 * In the rest of the frames we slide volume, pitch,
+--- xrally/soundplayer.h.orig	2008-10-06 19:05:37.418490072 +0200
++++ xrally/soundplayer.h	2008-10-06 19:08:51.905123447 +0200
+@@ -103,9 +103,9 @@
+ #define vphase data[2]
+ #define target data[0]
+ 
+-#define fx_enable(x) do { x##.active = 1; } while (0)
+-#define fx_disable(x) do { x##.active = 0; } while (0)
+-#define fx_test(x) (x##.active != 0)
++#define fx_enable(x) do { x.active = 1; } while (0)
++#define fx_disable(x) do { x.active = 0; } while (0)
++#define fx_test(x) (x.active != 0)
+ 
+ /* Sound driver stuff */
+ 
