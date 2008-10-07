@@ -1,0 +1,11 @@
+--- xrally/main.c.orig	2008-10-07 18:01:15.000000000 +0200
++++ xrally/main.c	2008-10-07 18:01:20.000000000 +0200
+@@ -92,7 +92,7 @@
+ 
+ int lives;
+ char livesString[10];
+-char mapString[15];
++char mapString[16];
+ char *hiString;
+ 
+ scoreStruct score;
