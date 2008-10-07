@@ -15,9 +15,11 @@ Source2:	%{name}.png
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fixes.patch
 Patch2:		%{name}-scorefile.patch
+Patch3:		%{name}-compile.patch
 URL:		http://www.linuxgames.com/xrally/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	xorg-lib-libXpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -60,6 +62,7 @@ cenário marítimo, usando barcos ao invés de carros.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 rm -f maps/"Test Level"
 
 %build
@@ -72,13 +75,13 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}} \
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}} \
 	$RPM_BUILD_ROOT%{_localstatedir}/games
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 touch $RPM_BUILD_ROOT%{_localstatedir}/games/%{name}.scores
@@ -91,6 +94,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README TODO %{name}.lsm
 %attr(2755,root,games) %{_bindir}/*
 %{_datadir}/xrally
-%{_applnkdir}/Games/Arcade/*
+%{_desktopdir}/xrally.desktop
 %{_pixmapsdir}/*
 %attr(664,root,games) %config %verify(not md5 mtime size) %{_localstatedir}/games/%{name}.scores
