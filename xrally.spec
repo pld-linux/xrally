@@ -4,7 +4,7 @@ Summary(pl.UTF-8):	Klon gry Rally X
 Summary(pt_BR.UTF-8):	Clone do jogo de fliperama Rally X
 Name:		xrally
 Version:	1.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Games
 # Source0:	ftp://ftp.linuxgames.com/xrally/%{name}-%{version}.tar.gz
@@ -16,6 +16,7 @@ Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fixes.patch
 Patch2:		%{name}-scorefile.patch
 Patch3:		%{name}-compile.patch
+Patch4:		%{name}-segfault.patch
 URL:		http://www.linuxgames.com/xrally/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -63,6 +64,7 @@ cenário marítimo, usando barcos ao invés de carros.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 rm -f maps/"Test Level"
 
 %build
